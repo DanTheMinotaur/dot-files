@@ -1,0 +1,11 @@
+[user]
+	name = Daniel
+	email = daniel@fail.ie
+[alias]
+	pop = revert --strategy resolve
+	push-remote = push --set-upstream origin
+	undo = reset --soft HEAD~
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
