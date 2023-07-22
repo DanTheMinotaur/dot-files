@@ -12,3 +12,5 @@
 - link:
     ~/.gitconfig:
       path: git/gitconfig
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/conf.d/nix-env.fish: fish/nix-env.fish/conf.d/nix-env.fish
