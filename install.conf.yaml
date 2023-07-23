@@ -14,3 +14,9 @@
       path: git/gitconfig
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/conf.d/nix-env.fish: fish/nix-env.fish/conf.d/nix-env.fish
+    ~/.gotfiles/macos.fish: fish/os/macos.fish
+
+    ~/.dotfiles/aliases.sh: general/aliases.sh
+
+    ~/.config/alacritty/alacritty.yml: general/alacritty.yml
+    ~/.config/starship.toml: general/starship.toml
