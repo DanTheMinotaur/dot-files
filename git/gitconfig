@@ -1,5 +1,5 @@
 [user]
-	name = Daniel
+	name = Dan
 	email = daniel@fail.ie
 [alias]
 	pop = revert --strategy resolve
