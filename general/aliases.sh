@@ -22,3 +22,5 @@ alias please='sudo'
 alias df="df -h"
 
 alias cat="bat -P"
+
+alias free="free -m"
