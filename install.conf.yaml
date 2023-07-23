@@ -8,13 +8,14 @@
 - create:
   - ~/.config
   - ~/.dotfiles
+  - ~/Devel
 
 - link:
     ~/.gitconfig:
       path: git/gitconfig
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/conf.d/nix-env.fish: fish/nix-env.fish/conf.d/nix-env.fish
-    ~/.gotfiles/macos.fish: fish/os/macos.fish
+    ~/.dotfiles/macos.fish: fish/os/macos.fish
 
     ~/.dotfiles/aliases.sh: general/aliases.sh
 
