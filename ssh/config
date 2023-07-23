@@ -1,0 +1,11 @@
+Host *
+    AddKeysToAgent yes
+    ServerAliveInterval 30
+    IdentityFile {{ ssh.common.IdentityFile }}
+
+{% for host, config in ssh.hosts | dictsort -%}
+Host {{ host }}
+  {% for option, setting  in config.items() -%}
+    {{ option }} {{ setting }}
+  {% endfor %}
+{% endfor %}

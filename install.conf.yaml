@@ -24,3 +24,6 @@
   - ~/.gitconfig:
       source_file: git/gitconfig
       params: secrets.yml
+  - ~/.ssh/config:
+      source_file: ssh/config
+      params: secrets.yml
