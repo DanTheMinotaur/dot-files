@@ -5,7 +5,7 @@ Host *
 
 {% for host, config in ssh.hosts | dictsort -%}
 Host {{ host }}
-  {% for option, setting  in config.items() -%}
+  {% for option, setting in config.items() -%}
     {{ option }} {{ setting }}
   {% endfor %}
 {% endfor %}
