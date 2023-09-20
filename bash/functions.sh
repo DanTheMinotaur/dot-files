@@ -19,6 +19,3 @@ extract ()
     echo "'$1' is not a valid file"
   fi
 }
-
-zip -r fun.zip functions.sh
-tar -cvjSf folder.tar.bz2 folder

@@ -28,3 +28,10 @@ alias free="free -m"
 alias copy="rsync -ahr --progress"
 
 alias rm="rm -i"
+
+alias cp="cp -i" 
+
+# Get the error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
+alias grubup="sudo update-grub"
