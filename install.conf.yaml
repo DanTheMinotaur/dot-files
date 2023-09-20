@@ -11,10 +11,14 @@
   - ~/Devel
 
 - link:
+    # bash
     ~/.bashrc: bash/.bashrc
     ~/.dotfiles/aliases.sh: general/aliases.sh
     ~/.dotfiles/functions.sh: bash/functions.sh
+
+    # fish
     ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/functions/functions.fish: fish/functions.fish
     ~/.config/fish/conf.d/nix-env.fish: fish/nix-env.fish/conf.d/nix-env.fish
 
     ~/.config/alacritty/alacritty.yml: general/alacritty.yml
