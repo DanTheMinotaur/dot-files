@@ -11,8 +11,6 @@
   - ~/Devel
 
 - link:
-    ~/.gitconfig:
-      path: git/gitconfig
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/conf.d/nix-env.fish: fish/nix-env.fish/conf.d/nix-env.fish
     ~/.dotfiles/macos.fish: fish/os/macos.fish
@@ -21,3 +19,11 @@
 
     ~/.config/alacritty/alacritty.yml: general/alacritty.yml
     ~/.config/starship.toml: general/starship.toml
+
+- template:
+  - ~/.gitconfig:
+      source_file: git/gitconfig
+      params: secrets.yml
+  - ~/.ssh/config:
+      source_file: ssh/config
+      params: secrets.yml

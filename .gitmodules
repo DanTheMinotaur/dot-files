@@ -1,7 +1,10 @@
 [submodule "dotbot"]
-	path = dotbot
+	path = .dotbot/dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
 [submodule "fish/nix-env.fish"]
 	path = fish/nix-env.fish
 	url = https://github.com/lilyball/nix-env.fish.git
+[submodule "dotbot-template"]
+	path = .dotbot/plugins/dotbot-template
+	url = git@github.com:DanTheMinotaur/dotbot-template.git
