@@ -1,6 +1,6 @@
 [user]
-	name = Dan
-	email = daniel@fail.ie
+	name = {{ git.name }}
+	email = {{ git.email }}
 [alias]
 	pop = revert --strategy resolve
 	push-remote = push --set-upstream origin

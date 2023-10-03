@@ -1,3 +1,4 @@
+# General fish helper functions
 
 # Fish command history
 function history
