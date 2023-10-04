@@ -37,3 +37,15 @@
   - ~/.ssh/config:
       source_file: ssh/config
       params: secrets.yml
+
+- nixenv:
+    packages:
+      - htop
+      - starship
+      - rclone
+      - eza # exa > 'exa' has been removed because it is unmaintained upstream.
+      - bat
+      - micro
+      - hwinfo
+      - fastfetch
+      - multitail

@@ -8,3 +8,6 @@
 [submodule "dotbot-template"]
 	path = .dotbot/plugins/dotbot-template
 	url = git@github.com:DanTheMinotaur/dotbot-template.git
+[submodule ".dotbot/plugins/dotbot-nix-env"]
+	path = .dotbot/plugins/dotbot-nix-env
+	url = git@github.com:DanTheMinotaur/dotbot-nix-env.git
