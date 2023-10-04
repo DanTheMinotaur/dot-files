@@ -18,14 +18,7 @@ if  [ -x /usr/bin/starship ]; then
 fi
 
 # Advanced command-not-found hook
-source /usr/share/doc/find-the-command/ftc.bash
-
-
-
-if test -f "$ALIASES"; then
-    source "$ALIASES"
-fi
-
+# source /usr/share/doc/find-the-command/ftc.bash
 
 __load_dotfiles () {
 

@@ -26,9 +26,6 @@ if test -d ~/.local/bin
     end
 end
 
-## Advanced command-not-found hook
-source /usr/share/doc/find-the-command/ftc.fish
-
 ## Starship prompt
 if status --is-interactive
    starship init fish | source
@@ -44,6 +41,13 @@ end
 
 if test (uname) = 'Darwin'
   source "$HOME/.dotfiles/macos.fish"
+end
+
+if test (uname) = 'Linux'
+  if test -e '/etc/arch-release'
+    ## Advanced command-not-found hook
+    source /usr/share/doc/find-the-command/ftc.fish
+  end
 end
 
 # Run fastfetch if session is interactive
