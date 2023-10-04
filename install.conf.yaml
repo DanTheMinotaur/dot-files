@@ -37,3 +37,15 @@
   - ~/.ssh/config:
       source_file: ssh/config
       params: secrets.yml
+
+- nixenv:
+    packages:
+      - htop
+      - starship
+      - rclone
+      - exa
+      - bat
+      - micro
+      - hwinfo
+      - fastfetch
+      - multitail
