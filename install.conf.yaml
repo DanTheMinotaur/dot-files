@@ -43,7 +43,7 @@
       - htop
       - starship
       - rclone
-      - exa
+      - eza # exa > 'exa' has been removed because it is unmaintained upstream.
       - bat
       - micro
       - hwinfo

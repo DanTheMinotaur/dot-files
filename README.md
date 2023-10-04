@@ -2,7 +2,11 @@
 Unix config files
 
 ```shell
-./install --plugin-dir '.dotbot/plugins/dotbot-template/' --plugin-dir '.dotbot/plugins/dotbot-nix-env/'
+# With generated templates
+./install --plugin-dir '.dotbot/plugins/dotbot-template/' 
+
+# Install nix packages
+./install --plugin-dir '.dotbot/plugins/dotbot-nix-env/'
 ```
 
 
