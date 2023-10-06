@@ -21,9 +21,13 @@
     ~/.config/fish/functions/functions.fish: fish/functions.fish
     ~/.config/fish/conf.d/nix-env.fish: fish/nix-env.fish/conf.d/nix-env.fish
 
+    # App configs
     ~/.config/alacritty/alacritty.yml: general/alacritty.yml
     ~/.config/starship.toml: general/starship.toml
+    ~/.local/share/konsole/Main.profile: konsole/Main.profile
+    ~/.local/share/konsole/GreenOnBlack.colorscheme: konsole/GreenOnBlack.colorscheme
 
+    # OS Specific configs
     ~/.dotfiles/macos.fish: fish/os/macos.fish
     ~/.config/libinput-gestures.conf:
       path: general/libinput-gestures.conf
