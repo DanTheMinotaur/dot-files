@@ -55,3 +55,4 @@
       - multitail
       - ncdu
       - mediainfo
+      - tmux
