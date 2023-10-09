@@ -6,3 +6,7 @@ Font=FiraCode Nerd Font Mono,12,-1,5,50,0,0,0,0,0
 Name=Main
 Parent=FALLBACK/
 TerminalColumns=110
+
+[Scrolling]
+HistoryMode=1
+HistorySize=100000
