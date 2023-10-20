@@ -11,3 +11,6 @@
 [submodule ".dotbot/plugins/dotbot-nix-env"]
 	path = .dotbot/plugins/dotbot-nix-env
 	url = git@github.com:DanTheMinotaur/dotbot-nix-env.git
+[submodule "fish/nvm.fish"]
+	path = fish/nvm.fish
+	url = https://github.com/jorgebucaran/nvm.fish.git
