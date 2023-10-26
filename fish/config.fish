@@ -54,3 +54,5 @@ end
 if status --is-interactive && type -q fastfetch
   fastfetch --load-config neofetch
 end
+
+pyenv init - | source
