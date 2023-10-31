@@ -62,3 +62,6 @@
       - ncdu
       - mediainfo
       - tmux
+      - bottom
+      - procs
+      - delta
