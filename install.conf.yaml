@@ -50,19 +50,19 @@
 
 - nixenv:
     packages:
-      - htop
-      - starship
-      - rclone
-      - eza # exa > 'exa' has been removed because it is unmaintained upstream.
-      - bat
-      - micro
-      - hwinfo
-      - fastfetch
-      - multitail
-      - ncdu
-      - mediainfo
-      - tmux
-      - bottom
-      - procs
-      - delta
-      - borgbackup
+      - nixpkgs.htop
+      - nixpkgs.starship
+      - nixpkgs.rclone
+      - nixpkgs.eza # exa > 'exa' has been removed because it is unmaintained upstream.
+      - nixpkgs.bat
+      - nixpkgs.micro
+      - nixpkgs.hwinfo
+      - nixpkgs.fastfetch
+      - nixpkgs.multitail
+      - nixpkgs.ncdu
+      - nixpkgs.mediainfo
+      - nixpkgs.tmux
+      - nixpkgs.bottom
+      - nixpkgs.procs
+      - nixpkgs.delta
+      - nixpkgs.borgbackup
