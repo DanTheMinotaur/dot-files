@@ -66,3 +66,4 @@
       - nixpkgs.procs
       - nixpkgs.delta
       - nixpkgs.borgbackup
+      - nixpkgs.fish
