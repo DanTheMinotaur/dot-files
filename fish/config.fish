@@ -52,7 +52,7 @@ end
 
 # Run fastfetch if session is interactive
 if status --is-interactive && type -q fastfetch
-  fastfetch --load-config neofetch
+  fastfetch # --load-config neofetch
 end
 
 if type -q pyenv
