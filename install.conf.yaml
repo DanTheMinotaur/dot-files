@@ -32,6 +32,7 @@
     ~/.config/starship.toml: general/starship.toml
     ~/.local/share/konsole/Main.profile: konsole/Main.profile
     ~/.local/share/konsole/GreenOnBlack.colorscheme: konsole/GreenOnBlack.colorscheme
+    ~/.config/fastfetch/config.jsonc: fastfetch/config.jsonc
 
     # OS Specific configs
     ~/.dotfiles/macos.fish: fish/os/macos.fish
