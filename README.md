@@ -22,3 +22,11 @@ git submodule update --recursive --remote
 cd .dotbot/plugins/
 git submodule add git@github.com:DanTheMinotaur/dotbot-nix-env.git 
 ```
+
+## Possible Errors
+
+### error: file 'nixpkgs' was not found in the Nix search path
+
+```shell
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+nix-channel --update
