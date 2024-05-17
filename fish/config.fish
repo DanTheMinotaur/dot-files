@@ -58,3 +58,7 @@ end
 if type -q pyenv
   pyenv init - | source
 end
+
+if test -f ~/.dotfiles/custom.sh
+  bass source ~/.dotfiles/custom.sh
+end
