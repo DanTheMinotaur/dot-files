@@ -9,6 +9,7 @@ alias ip='ip -color'
 alias tarnow='tar -acf '
 alias untar='tar -zxvf '
 alias wget='wget -c '
+alias tar+='tar -c --use-compress-program=pigz -f ' # tar+ /tmp/backup.tar.gz Devel Documents
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

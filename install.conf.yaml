@@ -69,3 +69,4 @@
       - nixpkgs.borgbackup
       - nixpkgs.fish
       - nixpkgs.sshfs
+      - nixpkgs.pigz
