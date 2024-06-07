@@ -68,3 +68,4 @@
       - nixpkgs.delta
       - nixpkgs.borgbackup
       - nixpkgs.fish
+      - nixpkgs.sshfs
