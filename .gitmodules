@@ -14,3 +14,6 @@
 [submodule "fish/nvm.fish"]
 	path = fish/nvm.fish
 	url = https://github.com/jorgebucaran/nvm.fish.git
+[submodule "fish/fisher"]
+	path = fish/fisher
+	url = https://github.com/jorgebucaran/fisher.git
