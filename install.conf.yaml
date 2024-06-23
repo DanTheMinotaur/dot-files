@@ -21,6 +21,7 @@
     ~/.config/fish/functions/functions.fish: fish/functions.fish
     ~/.config/fish/conf.d/nix-env.fish: fish/nix-env.fish/conf.d/nix-env.fish
     ~/.config/fish/conf.d/fisher.fish: fish/fisher/functions/fisher.fish
+    ~/.config/fish/functions/bass.fish: fish/bass/functions/bass.fish
 
     ~/.config/fish/conf.d/nvm.fish: fish/nvm.fish/conf.d/nvm.fish
     ~/.config/fish/completions/nvm.fish: fish/nvm.fish/completions/nvm.fish
