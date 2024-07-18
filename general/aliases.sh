@@ -40,3 +40,5 @@ alias grubup="sudo update-grub"
 alias openports="sudo lsof -i -P -n | grep LISTEN"
 
 alias osver="lsb_release -a"
+
+alias sz="du -sh"
