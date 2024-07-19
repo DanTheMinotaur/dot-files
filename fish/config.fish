@@ -62,3 +62,5 @@ end
 if test -f ~/.dotfiles/custom.sh
   bass source ~/.dotfiles/custom.sh
 end
+
+alias history="builtin history --show-time='%F %T ' search --contains"
