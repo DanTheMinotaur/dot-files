@@ -42,3 +42,5 @@ alias openports="sudo lsof -i -P -n | grep LISTEN"
 alias osver="lsb_release -a"
 
 alias sz="du -sh"
+
+alias sstat="journalctl --follow --unit="
