@@ -22,7 +22,7 @@ fi
 
 __load_dotfiles () {
 
-    local DOTFILES=("$HOME/.dotfiles/aliases.sh" "$HOME/.dotfiles/functions.sh")
+    local DOTFILES=("$HOME/.dotfiles/aliases.sh" "$HOME/.dotfiles/functions.sh" "$HOME/.dotfiles/custom.sh")
 
     for df in ${DOTFILES[@]}; do
         if [ -f "${df}" ]; then
