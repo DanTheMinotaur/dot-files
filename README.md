@@ -1,6 +1,11 @@
 # dot-files
 Unix config files
 
+Clone Repo
+```shell
+git clone --recursive git@github.com:DanTheMinotaur/dot-files.git
+```
+
 ```shell
 # With generated templates
 ./install --plugin-dir '.dotbot/plugins/dotbot-template/' 
