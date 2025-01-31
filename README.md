@@ -11,6 +11,8 @@ git clone --recursive git@github.com:DanTheMinotaur/dot-files.git
 ./install --plugin-dir '.dotbot/plugins/dotbot-template/' 
 
 # Install nix packages
+# If system has SELinux
+# https://github.com/DeterminateSystems/nix-installer 
 ./install --plugin-dir '.dotbot/plugins/dotbot-nix-env/'
 ```
 
