@@ -7,6 +7,8 @@ git clone --recursive git@github.com:DanTheMinotaur/dot-files.git
 ```
 
 ```shell
+# Create config links
+./install 
 # With generated templates
 ./install --plugin-dir '.dotbot/plugins/dotbot-template/' 
 
@@ -27,6 +29,18 @@ git submodule update --recursive --remote
 cd .dotbot/plugins/
 git submodule add git@github.com:DanTheMinotaur/dotbot-nix-env.git 
 ```
+
+### Subtree
+> [!IMPORTANT] 
+> Some git packages don't come with `git subtree` installed by default.  
+
+```sh
+# add subtree
+git subtree add --prefix=shell/tmux https://github.com/gpakosz/.tmux.git master --squash
+# update subtree
+git subtree pull --prefix=shell/tmux https://github.com/gpakosz/.tmux.git master --squash
+```
+
 
 ## Possible Errors
 
