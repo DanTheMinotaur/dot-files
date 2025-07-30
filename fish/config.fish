@@ -63,6 +63,8 @@ if test -f ~/.dotfiles/custom.sh
   bass source ~/.dotfiles/custom.sh
 end
 
+alias history="builtin history --show-time='%F %T ' --reverse search --contains"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/daniel/google-cloud-sdk/path.fish.inc' ]; . '/home/daniel/google-cloud-sdk/path.fish.inc'; end
 
