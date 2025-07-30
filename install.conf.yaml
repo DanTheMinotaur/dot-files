@@ -44,6 +44,10 @@
     ~/.config/libinput-gestures.conf:
       path: general/libinput-gestures.conf
       if: '[ "$(uname)" = "Linux" ] && [ "$XDG_CURRENT_DESKTOP" = "KDE" ]'
+
+    # Shell
+    ~/.config/tmux/tmux.conf: shell/tmux/.tmux.conf
+    ~/.config/tmux/tmux.conf.local: shell/tmux/.tmux.conf.local
     
 
 - template:
