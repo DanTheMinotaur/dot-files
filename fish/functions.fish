@@ -1,8 +1,8 @@
 # General fish helper functions
 
-function backup --argument filename
-    cp $filename $filename.bak
-end
+# function backup --argument filename
+#     cp $filename $filename.bak
+# end
 
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
 function __history_previous_command
