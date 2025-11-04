@@ -3,12 +3,12 @@
       relink: true
       create: true
 
-- clean: ['~', '~/.config']
+- clean: ["~", "~/.config"]
 
 - create:
-  - ~/.config
-  - ~/.dotfiles
-  - ~/Devel
+    - ~/.config
+    - ~/.dotfiles
+    - ~/Devel
 
 - link:
     # bash
@@ -26,7 +26,7 @@
 
     ~/.config/fish/conf.d/nvm.fish: fish/nvm.fish/conf.d/nvm.fish
     ~/.config/fish/completions/nvm.fish: fish/nvm.fish/completions/nvm.fish
-    ~/.config/fish/functions/: 
+    ~/.config/fish/functions/:
       path: fish/nvm.fish/functions/*
       glob: true
     ~/.config/fish/completions/fisher.fish: fish/fisher/completions/fisher.fish
@@ -48,34 +48,33 @@
     # Shell
     ~/.config/tmux/tmux.conf: shell/tmux/.tmux.conf
     ~/.config/tmux/tmux.conf.local: shell/tmux/.tmux.conf.local
-    
 
 - template:
-  - ~/.gitconfig:
-      source_file: git/gitconfig
-      params: secrets.yml
-  - ~/.ssh/config:
-      source_file: ssh/config
-      params: secrets.yml
+    - ~/.gitconfig:
+        source_file: git/gitconfig
+        params: secrets.yml
+    - ~/.ssh/config:
+        source_file: ssh/config
+        params: secrets.yml
 
 - nixenv:
     packages:
-      - nixpkgs.htop
-      - nixpkgs.starship
-      - nixpkgs.rclone
-      - nixpkgs.eza # exa > 'exa' has been removed because it is unmaintained upstream.
-      - nixpkgs.bat
-      - nixpkgs.micro
-      - nixpkgs.hwinfo
-      - nixpkgs.fastfetch
-      - nixpkgs.multitail
-      - nixpkgs.ncdu
-      - nixpkgs.mediainfo
-      - nixpkgs.tmux
-      - nixpkgs.bottom
-      - nixpkgs.procs
-      - nixpkgs.delta
-      - nixpkgs.borgbackup
-      - nixpkgs.fish
-      - nixpkgs.sshfs
-      - nixpkgs.pigz
+      - nixpkgs#htop
+      - nixpkgs#starship
+      - nixpkgs#rclone
+      - nixpkgs#eza # exa > 'exa' has been removed because it is unmaintained upstream.
+      - nixpkgs#bat
+      - nixpkgs#micro
+      - nixpkgs#hwinfo
+      - nixpkgs#fastfetch
+      - nixpkgs#multitail
+      - nixpkgs#ncdu
+      - nixpkgs#mediainfo
+      - nixpkgs#tmux
+      - nixpkgs#bottom
+      - nixpkgs#procs
+      - nixpkgs#delta
+      - nixpkgs#borgbackup
+      - nixpkgs#fish
+      - nixpkgs#sshfs
+      - nixpkgs#pigz
