@@ -31,7 +31,7 @@ if status --is-interactive
    starship init fish | source
 end
 
-set dotfiles "$HOME/.dotfiles/aliases.sh" "$HOME/.config/fish/functions/functions.fish" "$HOME/.env"
+set dotfiles "$HOME/.dotfiles/aliases.sh" "$HOME/.config/fish/functions/functions.fish" "$HOME/.env" "$HOME/.dotfiles/exports.sh"
 
 for df in $dotfiles
   if test -e $df
@@ -59,11 +59,18 @@ if type -q pyenv
   pyenv init - | source
 end
 
+# source unique to system commands
 if test -f ~/.dotfiles/custom.sh
   bass source ~/.dotfiles/custom.sh
 end
 
+if test -f ~/.dotfiles/custom.fish
+  source ~/.dotfiles/custom.fish
+end
+
 alias history="builtin history --show-time='%F %T ' --reverse search --contains"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/daniel/google-cloud-sdk/path.fish.inc' ]; . '/home/daniel/google-cloud-sdk/path.fish.inc'; end
+
+# https://github.com/junegunn/fzf
+fzf --fish | source
+
