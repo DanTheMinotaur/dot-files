@@ -15,6 +15,7 @@
     ~/.bashrc: bash/.bashrc
     ~/.dotfiles/aliases.sh: general/aliases.sh
     ~/.dotfiles/functions.sh: bash/functions.sh
+    ~/.dotfiles/exports.sh: general/exports.sh
 
     # fish
     ~/.config/fish/config.fish: fish/config.fish
