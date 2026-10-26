@@ -10,6 +10,11 @@
     - ~/.dotfiles
     - ~/Devel
 
+- shell:
+    - touch ~/.dotfiles/custom.fish
+    - touch ~/.dotfiles/custom.sh
+    - fisher install PatrickF1/fzf.fish # https://github.com/PatrickF1/fzf.fish
+
 - link:
     # bash
     ~/.bashrc: bash/.bashrc
@@ -79,3 +84,5 @@
       - nixpkgs#fish
       - nixpkgs#sshfs
       - nixpkgs#pigz
+      - nixpkgs#fzf
+      - nixpkgs#fd
