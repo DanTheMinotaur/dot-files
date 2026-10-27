@@ -37,3 +37,5 @@
         export PATH="$HOME/.nix-profile/bin:$PATH"
         fish -c 'if not type -q fisher; curl -fsSL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source; end; fisher update'
       description: Install or update fisher plugins
+      stdout: true
+      stderr: true
