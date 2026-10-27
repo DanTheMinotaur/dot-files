@@ -1,0 +1,29 @@
+- nixenv:
+    # Set to true if you also want `nix profile upgrade` on each run.
+    update: false
+    packages:
+      - nixpkgs#htop
+      - nixpkgs#starship
+      - nixpkgs#rclone
+      - nixpkgs#eza # 'exa' was removed because it is unmaintained upstream.
+      - nixpkgs#bat
+      - nixpkgs#micro
+      - nixpkgs#hwinfo
+      - nixpkgs#fastfetch
+      - nixpkgs#multitail
+      - nixpkgs#ncdu
+      - nixpkgs#mediainfo
+      - nixpkgs#tmux
+      - nixpkgs#bottom
+      - nixpkgs#procs
+      - nixpkgs#delta
+      - nixpkgs#borgbackup
+      - nixpkgs#fish
+      - nixpkgs#sshfs
+      - nixpkgs#pigz
+      - nixpkgs#fzf
+      - nixpkgs#fd
+
+- shell:
+    - command: ./shell/scripts/install-fish-plugins.sh
+      description: Install fish plugins with fisher
