@@ -10,6 +10,10 @@
     - ~/.dotfiles
     - ~/Devel
 
+- shell:
+    - touch ~/.dotfiles/custom.fish
+    - touch ~/.dotfiles/custom.sh
+
 - link:
     # bash
     ~/.bashrc: bash/.bashrc
@@ -17,21 +21,9 @@
     ~/.dotfiles/functions.sh: bash/functions.sh
     ~/.dotfiles/exports.sh: general/exports.sh
 
-    # fish
+    # fish (plugin files and fish_plugins are owned by Fisher, not dotbot)
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/functions/functions.fish: fish/functions.fish
-    ~/.config/fish/conf.d/nix-env.fish: fish/nix-env.fish/conf.d/nix-env.fish
-    ~/.config/fish/conf.d/fisher.fish: fish/fisher/functions/fisher.fish
-    ~/.config/fish/functions/bass.fish: fish/bass/functions/bass.fish
-    ~/.config/fish/functions/__bass.py: fish/bass/functions/__bass.py
-
-    ~/.config/fish/conf.d/nvm.fish: fish/nvm.fish/conf.d/nvm.fish
-    ~/.config/fish/completions/nvm.fish: fish/nvm.fish/completions/nvm.fish
-    ~/.config/fish/functions/:
-      path: fish/nvm.fish/functions/*
-      glob: true
-    ~/.config/fish/completions/fisher.fish: fish/fisher/completions/fisher.fish
-    ~/.config/fish/fish_plugins: fish/fish_plugins
 
     # App configs
     ~/.config/alacritty/alacritty.yml: general/alacritty.yml
@@ -57,25 +49,3 @@
     - ~/.ssh/config:
         source_file: ssh/config
         params: secrets.yml
-
-- nixenv:
-    packages:
-      - nixpkgs#htop
-      - nixpkgs#starship
-      - nixpkgs#rclone
-      - nixpkgs#eza # exa > 'exa' has been removed because it is unmaintained upstream.
-      - nixpkgs#bat
-      - nixpkgs#micro
-      - nixpkgs#hwinfo
-      - nixpkgs#fastfetch
-      - nixpkgs#multitail
-      - nixpkgs#ncdu
-      - nixpkgs#mediainfo
-      - nixpkgs#tmux
-      - nixpkgs#bottom
-      - nixpkgs#procs
-      - nixpkgs#delta
-      - nixpkgs#borgbackup
-      - nixpkgs#fish
-      - nixpkgs#sshfs
-      - nixpkgs#pigz

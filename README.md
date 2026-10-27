@@ -1,23 +1,42 @@
 # dot-files
 Unix config files
 
-Clone Repo
+## Install
+
+Clone the repo:
+
 ```shell
 git clone --recursive git@github.com:DanTheMinotaur/dot-files.git
 ```
 
-```shell
-# Create config links
-./install 
-# With generated templates
-./install --plugin-dir '.dotbot/plugins/dotbot-template/' 
+Programs and dotfiles are installed as separate steps. Run programs first:
 
-# Install nix packages
-# If system has SELinux
-# https://github.com/DeterminateSystems/nix-installer 
-./install --plugin-dir '.dotbot/plugins/dotbot-nix-env/'
+```shell
+# Nix packages + fish plugins
+./install packages
+
+# Dotfile symlinks + templated configs (requires secrets.yml)
+./install links
+
+# Or both, in order
+./install
 ```
 
+`./install links` requires `secrets.yml` (gitignored) for the `template`
+directive. See `git/gitconfig` and `ssh/config` for the parameters used.
+
+If the system has SELinux, use the Determinate Systems Nix installer:
+<https://github.com/DeterminateSystems/nix-installer>
+
+### Fish plugins
+
+Fish plugins are declared in `fish/fish_plugins` and managed by Fisher.
+To add or remove a plugin:
+
+1. Edit `fish/fish_plugins`.
+2. Run `./install packages`.
+
+Removing a plugin from the list and running the package step uninstalls it.
 
 ## Notes
 
@@ -26,15 +45,20 @@ git clone --recursive git@github.com:DanTheMinotaur/dot-files.git
 git submodule update --recursive --remote
 ```
 
-**Add new submodule**
+**Add new dotbot plugin submodule**
 ```shell
 cd .dotbot/plugins/
-git submodule add git@github.com:DanTheMinotaur/dotbot-nix-env.git 
+git submodule add git@github.com:DanTheMinotaur/dotbot-nix-env.git
 ```
 
+### Migrating from the fish submodule setup
+
+If you previously installed this repo, remove the old fish plugin symlinks once
+before running `./install packages`:
+
 ### Subtree
-> [!IMPORTANT] 
-> Some git packages don't come with `git subtree` installed by default.  
+> [!IMPORTANT]
+> Some git packages don't come with `git subtree` installed by default.
 
 ```sh
 # add subtree
@@ -51,3 +75,4 @@ git subtree pull --prefix=shell/tmux https://github.com/gpakosz/.tmux.git master
 ```shell
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 nix-channel --update
+```
