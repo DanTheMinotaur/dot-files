@@ -1,0 +1,41 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- nixenv:
+    # Set to true if you also want `nix profile upgrade` on each run.
+    update: false
+    packages:
+      - nixpkgs#htop
+      - nixpkgs#starship
+      - nixpkgs#rclone
+      - nixpkgs#eza # 'exa' was removed because it is unmaintained upstream.
+      - nixpkgs#bat
+      - nixpkgs#micro
+      - nixpkgs#hwinfo
+      - nixpkgs#fastfetch
+      - nixpkgs#multitail
+      - nixpkgs#ncdu
+      - nixpkgs#mediainfo
+      - nixpkgs#tmux
+      - nixpkgs#bottom
+      - nixpkgs#procs
+      - nixpkgs#delta
+      - nixpkgs#borgbackup
+      - nixpkgs#fish
+      - nixpkgs#sshfs
+      - nixpkgs#pigz
+      - nixpkgs#fzf
+      - nixpkgs#fd
+
+- link:
+    ~/.config/fish/fish_plugins: fish/fish_plugins
+
+- shell:
+    - command: |
+        export PATH="$HOME/.nix-profile/bin:$PATH"
+        fish -c 'if not type -q fisher; curl -fsSL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source; end; fisher update'
+      description: Install or update fisher plugins
+      stdout: true
+      stderr: true

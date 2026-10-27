@@ -1,15 +1,43 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-set -e
-
-CONFIG="install.conf.yaml"
-DOTBOT_DIR=".dotbot/dotbot"
-
-DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTBOT="${BASEDIR}/.dotbot/dotbot/bin/dotbot"
 
-cd "${BASEDIR}"
-git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
-git submodule update --init --recursive
+cd "$BASEDIR"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+cmd="${1:-all}"
+if [[ $# -gt 0 ]]; then
+  shift
+fi
+
+run_dotbot() {
+  "$DOTBOT" -d "$BASEDIR" -c "$1" \
+    --plugin-dir "${BASEDIR}/.dotbot/plugins/dotbot-nix-env" \
+    --plugin-dir "${BASEDIR}/.dotbot/plugins/dotbot-template" \
+    "${@:2}"
+}
+
+# Both steps need dotbot; the fish submodules are no longer fetched.
+git -C "$BASEDIR" submodule sync --quiet --recursive
+git -C "$BASEDIR" submodule update --init --recursive
+
+case "$cmd" in
+  packages)
+    run_dotbot packages.conf.yaml "$@"
+    ;;
+  links)
+    run_dotbot links.conf.yaml "$@"
+    ;;
+  all)
+    run_dotbot packages.conf.yaml "$@"
+    run_dotbot links.conf.yaml "$@"
+    ;;
+  -h|--help)
+    echo "usage: $0 [packages|links|all] [dotbot options]" >&2
+    ;;
+  *)
+    echo "usage: $0 [packages|links|all] [dotbot options]" >&2
+    exit 1
+    ;;
+esac
