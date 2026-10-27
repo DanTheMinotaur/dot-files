@@ -1,3 +1,8 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
 - nixenv:
     # Set to true if you also want `nix profile upgrade` on each run.
     update: false
@@ -24,6 +29,11 @@
       - nixpkgs#fzf
       - nixpkgs#fd
 
+- link:
+    ~/.config/fish/fish_plugins: fish/fish_plugins
+
 - shell:
-    - command: ./shell/scripts/install-fish-plugins.sh
-      description: Install fish plugins with fisher
+    - command: |
+        export PATH="$HOME/.nix-profile/bin:$PATH"
+        fish -c 'if not type -q fisher; curl -fsSL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source; end; fisher update'
+      description: Install or update fisher plugins
